@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Max Array</title>
+	
+</head>
+<body>
+	<p id="p"></p>
+	<script type="text/javascript">
+		
+		
+		function myFunction() {
+			var str = "hello i am new here! really i am. bla saoiha ndsiuw alnsdnjsa d";
+			
+			array = str.split(" ");
+			
+			var string = "";
+
+			for(i = 0; i < array.length; i++) {
+				var result = array[i].charAt(0).toUpperCase();
+				result = result + array[i].substring(1) + " ";
+				string = string + result;
+			}
+			console.log(string);
+		}
+
+		myFunction();
+
+	</script>
+</body>
+</html>

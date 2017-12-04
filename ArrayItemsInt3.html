@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>basket</title>
+	
+</head>
+<body>
+	<form id="myForm"><input type="text" id="input"></form>
+	<button onclick="add()">Add Item in the Basket</button>
+	<button onclick="display()">Display Basket</button>
+	<hr>
+	
+	<div id="displayArray"></div>
+	
+
+
+	<script type="text/javascript">
+		var basket = new Array;
+		
+		function add(){
+		  var addItem = String(document.getElementById("input").value);
+		  basket.push(addItem);
+		  alert(addItem + " added at index " + (basket.length - 1));
+		  var form = document.getElementById("myForm");
+		  form.reset();
+		}
+
+		
+		function display() {
+				document.getElementById("displayArray").innerHTML = "";
+			for (i = 0; i < basket.length; i++){
+
+				document.getElementById("displayArray").innerHTML += "Element " + i + " = " + basket[i] + "<br>";
+			}
+		}
+
+	</script>
+</body>
+</html>

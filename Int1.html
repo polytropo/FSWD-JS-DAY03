@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Max Array</title>
+	
+</head>
+<body>
+	<p id="p"></p>
+	<script type="text/javascript">
+		
+		var classGrades = [76, 85, 65, 93, 81];
+		var avgGrade;
+		var sumGrades = 0;
+
+		for (i = 0; i < classGrades.length; i++) {
+			sumGrades += classGrades[i];
+			avgGrade = sumGrades / classGrades.length;
+		}
+		console.log("Average grade of the class was: " + avgGrade);
+
+		for (i = 0; i < classGrades.length; i++) {
+			
+			switch (true) {
+			case classGrades[i]<60:
+				console.log(classGrades[i] + " F");
+				break;
+			case classGrades[i]<70:
+				console.log(classGrades[i] + " D");
+				break;
+			case classGrades[i]<80:
+				console.log(classGrades[i] + " C");
+				break;
+			case classGrades[i] < 90:
+				console.log(classGrades[i] + " B");
+				break;
+			case classGrades[i] <= 100:
+				console.log(classGrades[i] + " A");
+				break;
+			default: 
+				console.log("You didnt took the test!");
+				break;
+		}
+		}
+
+
+	</script>
+</body>
+</html>
